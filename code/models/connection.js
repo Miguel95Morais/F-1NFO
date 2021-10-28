@@ -16,7 +16,7 @@ var pool = mysql.createPool({
     host: 'localhost',
     user: 'root',
     password: 'password',
-    database: 'chinook'
+    database: 'f-1nfo'
 });
 
 
