@@ -3,8 +3,10 @@
 <head>
     <title>F-1NFO Circuits</title>
     <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="stylesheet" href="./stylesheets/map.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -15,6 +17,7 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script src="./javascripts/navbar.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.js"></script>
 </head>
 
 <body>
@@ -35,122 +38,142 @@
         </div>
     </nav>
     <main>
-        <!--Might change the amount of images on the carousel (Change here) 21-->
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="11"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="12"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="13"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="14"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="15"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="16"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="17"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="18"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="19"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="20"></li>
-            </ol>
+        <!--Not working-->
+        <section class="carousel">
             <!--Might change the amount of images on the carousel (Change here) 21-->
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="./images/Circuits/Autodromo Enzo e Dino Ferrari.png"
-                        alt="First slide">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="11"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="12"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="13"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="14"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="15"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="16"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="17"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="18"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="19"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="20"></li>
+                </ol>
+                <!--Might change the amount of images on the carousel (Change here) 21-->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="./images/Circuits/Autodromo Enzo e Dino Ferrari.png"
+                            alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./images/Circuits/Autodromo Nazionale Monza.png"
+                            alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./images/Circuits/Autódromo Hermanos Rodríguez.png"
+                            alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./images/Circuits/Autódromo Internacional do Algarve.png"
+                            alt="Fourth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./images/Circuits/Autódromo José Carlos Pace.png"
+                            alt="Fifth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./images/Circuits/Bahrain International Circuit.png"
+                            alt="Sixth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./images/Circuits/Baku City Circuit.png" alt="Seventh slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./images/Circuits/Circuit de Barcelona-Catalunya.png"
+                            alt="Eighth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./images/Circuits/Circuit de Monaco.png" alt="Ninth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./images/Circuits/Circuit de Spa-Francorchamps.png"
+                            alt="Tenth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./images/Circuits/Circuit of The Americas.png"
+                            alt="Eleventh slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./images/Circuits/Circuit Paul Ricard.png" alt="Twelfth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./images/Circuits/Circuit Zandvoort.png" alt="Thirteenth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./images/Circuits/Hungaroring.png" alt="Fourteenth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./images/Circuits/Intercity Istanbul Park.png"
+                            alt="Fifteenth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./images/Circuits/Jeddah Corniche Circuit.png"
+                            alt="Sixteenth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./images/Circuits/Losail International Circuit.png"
+                            alt="Seventeeth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./images/Circuits/Red Bull Ring.png" alt="Eighteenth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./images/Circuits/Silverstone Circuit.png"
+                            alt="Nineteenth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./images/Circuits/Sochi Autodrom.png" alt="Twentieth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./images/Circuits/Yas Marina Circuit.png"
+                            alt="Twenty-First slide">
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="./images/Circuits/Autodromo Nazionale Monza.png" alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="./images/Circuits/Autódromo Hermanos Rodríguez.png"
-                        alt="Third slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="./images/Circuits/Autódromo Internacional do Algarve.png"
-                        alt="Fourth slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="./images/Circuits/Autódromo José Carlos Pace.png" alt="Fifth slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="./images/Circuits/Bahrain International Circuit.png"
-                        alt="Sixth slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="./images/Circuits/Baku City Circuit.png" alt="Seventh slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="./images/Circuits/Circuit de Barcelona-Catalunya.png"
-                        alt="Eighth slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="./images/Circuits/Circuit de Monaco.png" alt="Ninth slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="./images/Circuits/Circuit de Spa-Francorchamps.png"
-                        alt="Tenth slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="./images/Circuits/Circuit of The Americas.png" alt="Eleventh slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="./images/Circuits/Circuit Paul Ricard.png" alt="Twelfth slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="./images/Circuits/Circuit Zandvoort.png" alt="Thirteenth slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="./images/Circuits/Hungaroring.png" alt="Fourteenth slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="./images/Circuits/Intercity Istanbul Park.png"
-                        alt="Fifteenth slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="./images/Circuits/Jeddah Corniche Circuit.png"
-                        alt="Sixteenth slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="./images/Circuits/Losail International Circuit.png"
-                        alt="Seventeeth slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="./images/Circuits/Red Bull Ring.png" alt="Eighteenth slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="./images/Circuits/Silverstone Circuit.png" alt="Nineteenth slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="./images/Circuits/Sochi Autodrom.png" alt="Twentieth slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="./images/Circuits/Yas Marina Circuit.png" alt="Twenty-First slide">
-                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-        <!--MAPBOX API HERE-->
+        </section>
+        <section>
+            <!--MAPBOX API HERE-->
+            <div id="map"></div>
+            <script>
+                mapboxgl.accessToken = 'pk.eyJ1IjoibWlndWVsMW1vcmFpcyIsImEiOiJja3Z2NWNrZWMwMW11Mm9sdWg1NnBzb3ppIn0.azfIxdnPHwZDNTVwd5h_VA';
+                const map = new mapboxgl.Map({
+                    container: 'map', // container ID
+                    style: 'mapbox://styles/mapbox/satellite-streets-v11', // style URL
+                    center: [-8.628, 37.233], // starting position [lng, lat] Inserts are backwards inside batabase - lat, lng
+                    zoom: 8 // starting zoom
+                });
+            </script>
+        </section>
     </main>
-    <footer>
+    <!--<footer>
         <p>Author: Miguel Morais<br>
             <a href="mailto:miguel1morais@gmail.com">miguel1morais@gmail.com</a>
         </p>
-    </footer>
+    </footer>-->
 </body>
 
 </html>

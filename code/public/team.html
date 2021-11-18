@@ -2,16 +2,48 @@
 
 <head>
     <title>F-1NFO Teams</title>
-    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="./javascripts/navbar.js"></script>
 </head>
 
 <body>
-    <header>
-        <headernav class="menu">
-            <a id='navTeams' href="../public/team.html">Teams</a>
-            <a id='navCircuits' href="../public/circuit.html">Circuits</a>
-            <a id='navHallofFame' href="../public/halloffame.html">Hall of Fame</a>
-            <a id='navLiveResults' href="../public/liveresult.html">Live Results</a>
-        </headernav>
-    </header>
+    <nav class="navbar">
+        <div class="brand-title">F-1NFO</div>
+        <a href="./index.html" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="./team.html">Teams</a></li>
+                <li><a href="./circuit.html">Circuits</a></li>
+                <li><a href="./halloffame.html">Hall of Fame</a></li>
+                <li><a href="./liveresult.html">Live Results</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <!--Connect to db-->
+        <h2>Team Name: <input type="text" id="name"></h2>
+        <h2>Team Principal: <input type="text" id="principal"></h2>
+        <h2>Team Nationality: <input type="text" id="nationality"></h2>
+        <h2>Team Championships: <input type="text" id="Championships"></h2>
+        <h2>Team Car: <input type="text" id="car"></h2>
+        <h2>Team Period: <input type="date" id="Period"></h2>
+        <h2><input type="button" value="Add Team" onclick="addTeam()"></h2>
+    </main>
 </body>
+
+</html>
