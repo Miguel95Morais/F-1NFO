@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
-var teaModel = require("../models/teamsModel");
+var hftModel = require("../models/halloffameteamsModel");
 
-/* GET all teams */
+/* GET all halloffameteams */
 /*router.get('/', async function (req, res, next) {
     let filterObj = req.query;
     let result = await teaModel.getAll(filterObj);
@@ -10,14 +10,14 @@ var teaModel = require("../models/teamsModel");
         send(result.data);
 });*/
 router.get('/', async function (req, res, next) {
-    let teams = await teaModel.getAllTeams();
-    res.send(teams);
+    let halloffameteams = await hftModel.getAllHalloffameteams();
+    res.send(halloffameteams);
 });
 
 /* Post all teams */
 router.post('/', async function (req, res, next) {
-    let teams = req.body;
-    let result = await teaModel.save(teams);
+    let halloffameteams = req.body;
+    let result = await hftModel.save(halloffameteams);
     res.status(result.status).
         send(result.data);
 });
