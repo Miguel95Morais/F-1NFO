@@ -96,21 +96,7 @@ body {
     display: flex;
   }
 }
-/*main {
+main {
   position: relative;
   top: 2%;
-}*/
-
-/*main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-content: flex-start;
-  align-items: center;
-  
-}*/
-.carousel{
-  position: relative;
-  height: 5%;
-  width: 100%;
 }
